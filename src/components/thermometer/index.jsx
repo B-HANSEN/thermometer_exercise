@@ -4,6 +4,7 @@ import './styles.scss';
 
 const Thermometer = ({ min, max, target }) => {
     const outOfRange = target < min || target > max;
+    const tempInfo = !outOfRange ? `${target}℃` : 'not in range';
 
     useEffect(() => {
         const temp = target / (min + max) *280; // use 280deg to stay in possible window
@@ -33,7 +34,6 @@ const Thermometer = ({ min, max, target }) => {
         pointer_style.background = 'black';
     }, [ min, max, outOfRange, target ]);
 
-    const tempInfo = !outOfRange ? `${target}℃` : 'not in range';
 
     return (
         <div className='Thermometer'>
@@ -45,7 +45,6 @@ const Thermometer = ({ min, max, target }) => {
                 <div className="Thermometer__box--maxtemp" />
                 <div className="Thermometer__box--display">{ tempInfo }</div>
             </section>
-
         </div>
     )
 }

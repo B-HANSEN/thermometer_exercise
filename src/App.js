@@ -1,4 +1,3 @@
-import './App.css';
 import Thermometer from './components/thermometer';
 
 function App() {
