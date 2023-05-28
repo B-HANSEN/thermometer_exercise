@@ -1,0 +1,52 @@
+.Thermometer {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+	&__box {
+		background: white;   
+		border: .12em solid #000;
+		border-radius: 50%;
+		content: '';
+		height: 12em;
+		margin: 3rem;
+		position: relative;
+		width: 12em;
+		
+		&--pointer {
+			border-radius: 15px;
+			height: 6em;
+			left: 50%;
+			position: absolute;
+			top: 75%;
+			transform-origin: top;
+			width: .2em;
+		}
+
+		&--mintemp {
+			background: #000;
+			height: 30px;
+			left: 12%;
+			position: absolute;
+			top: 87%;
+			transform: rotate(220deg);
+			width: .2em;
+		}
+
+		&--maxtemp {
+			background: #000;
+			height: 30px;
+			left: 87%;
+			position: absolute;
+			top: 87%;
+			transform: rotate(140deg);
+			width: .2em;
+		}
+
+		&--display {
+			left: 40%;
+			top: 110%;
+			position: absolute;
+		}
+	}
+}
